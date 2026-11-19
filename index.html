@@ -6,29 +6,65 @@
 <meta name="theme-color" content="#116b45">
 <title>My Mymensingh | আপনার শহর, আপনার সেবা</title>
 <style>
-:root{--green:#116b45;--deep:#084b31;--mint:#eaf6ef;--ink:#173329;--muted:#64756d;--line:#dce9e1;--white:#fff}
-*{box-sizing:border-box}body{margin:0;background:#f5f8f6;color:var(--ink);font-family:system-ui,-apple-system,"Noto Sans Bengali",sans-serif}
+:root{--green:#116b45;--deep:#084b31;--mint:#eaf6ef;--ink:#173329;--muted:#64756d;--line:#dce9e1;--white:#fff;--red:#b42318}
+*{box-sizing:border-box}
+body{margin:0;background:#f5f8f6;color:var(--ink);font-family:system-ui,-apple-system,"Noto Sans Bengali",sans-serif}
 header{background:linear-gradient(135deg,var(--deep),#168452);color:white;padding:26px 16px 30px}
-.wrap{max-width:980px;margin:auto;padding:0 16px}.top{display:flex;align-items:center;justify-content:space-between;gap:12px}
-.brand{font-size:22px;font-weight:800;letter-spacing:.2px}.tag{opacity:.9;margin-top:5px;font-size:14px}
-.hero{padding:25px 0 8px}.hero h1{font-size:clamp(24px,5vw,36px);margin:0 0 8px}.hero p{margin:0 0 18px;opacity:.92}
+.wrap{max-width:980px;margin:auto;padding:0 16px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{font-size:22px;font-weight:800;letter-spacing:.2px}
+.tag{opacity:.9;margin-top:5px;font-size:14px}
+.hero{padding:25px 0 8px}
+.hero h1{font-size:clamp(24px,5vw,36px);margin:0 0 8px}
+.hero p{margin:0 0 18px;opacity:.92}
 .search{display:flex;gap:8px;background:white;padding:6px;border-radius:14px;max-width:650px}
 .search input{border:0;outline:0;flex:1;min-width:0;padding:12px;font-size:16px;color:#173329}
 .search button,.btn{border:0;background:var(--green);color:white;border-radius:10px;padding:11px 16px;font-weight:700;cursor:pointer}
-main{padding:25px 0 40px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:10px;margin-bottom:14px}
-h2{font-size:21px;margin:0}.hint{font-size:13px;color:var(--muted)}
+main{padding:25px 0 40px}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:10px;margin-bottom:14px}
+h2{font-size:21px;margin:0}
+.hint{font-size:13px;color:var(--muted)}
 .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
 .cat{display:flex;align-items:center;gap:12px;text-align:left;width:100%;border:1px solid var(--line);background:white;border-radius:15px;padding:16px;cursor:pointer;color:var(--ink);box-shadow:0 2px 8px #163d2610}
-.cat:active{transform:scale(.99)}.emoji{width:46px;height:46px;display:grid;place-items:center;background:var(--mint);border-radius:13px;font-size:25px;flex-shrink:0}
-.cat strong{display:block;font-size:15px}.cat small{color:var(--muted);display:block;margin-top:3px}
+.cat:active{transform:scale(.99)}
+.emoji{width:46px;height:46px;display:grid;place-items:center;background:var(--mint);border-radius:13px;font-size:25px;flex-shrink:0}
+.cat strong{display:block;font-size:15px}
+.cat small{color:var(--muted);display:block;margin-top:3px}
 .panel{background:white;border:1px solid var(--line);border-radius:16px;padding:18px;margin-top:18px}
-.hidden{display:none!important}.back{background:#eaf6ef;color:var(--deep);border:0;border-radius:10px;padding:9px 13px;font-weight:700;cursor:pointer;margin-bottom:14px}
-.detail-title{display:flex;align-items:center;gap:12px;margin-bottom:8px}.detail-title .emoji{width:52px;height:52px}
+.hidden{display:none!important}
+.back{background:#eaf6ef;color:var(--deep);border:0;border-radius:10px;padding:9px 13px;font-weight:700;cursor:pointer;margin-bottom:14px}
+.detail-title{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+.detail-title .emoji{width:52px;height:52px}
 .empty{background:#f7faf8;border:1px dashed #b8d3c2;border-radius:13px;padding:20px;text-align:center;margin-top:16px}
-.empty .big{font-size:32px}.empty h3{margin:8px 0 5px;font-size:17px}.empty p{margin:0;color:var(--muted);font-size:14px;line-height:1.6}
+.empty .big{font-size:32px}
+.empty h3{margin:8px 0 5px;font-size:17px}
+.empty p{margin:0;color:var(--muted);font-size:14px;line-height:1.6}
 footer{background:#eaf2ed;color:#53675d;padding:22px 16px;text-align:center;font-size:13px}
 .note{font-size:13px;color:var(--muted);line-height:1.6}
+.blood-tools{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:18px 0}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:13px;font-weight:700;color:#365348}
+.field input,.field select{width:100%;border:1px solid var(--line);border-radius:10px;padding:12px;font:inherit;background:#fff;color:var(--ink);min-width:0}
+.actions{display:flex;flex-wrap:wrap;gap:9px;margin:14px 0}
+.btn.secondary{background:#eaf6ef;color:var(--deep)}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.donor-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:14px}
+.donor{border:1px solid var(--line);border-radius:13px;padding:14px;background:#fff}
+.donor-top{display:flex;align-items:center;gap:10px}
+.blood-badge{background:#fff0ef;color:#b42318;border-radius:11px;padding:10px 12px;font-weight:800;font-size:18px}
+.donor h3{margin:0;font-size:16px}
+.donor p{margin:5px 0 0;color:var(--muted);font-size:13px}
+.donor a{display:inline-block;margin-top:11px;color:var(--green);font-weight:700;text-decoration:none}
+.form-panel{border:1px solid var(--line);border-radius:14px;padding:16px;margin-top:20px;background:#fbfdfb}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.consent{display:flex;gap:9px;align-items:flex-start;font-size:13px;line-height:1.5;margin:14px 0}
+.consent input{margin-top:3px}
+.status{padding:12px;border-radius:10px;background:#fff8e6;color:#775500;font-size:13px;line-height:1.5;margin-top:12px}
+.status.success{background:#eaf6ef;color:#084b31}
+.status.error{background:#fff0ef;color:#9b1c14}
+.empty-list{padding:18px;text-align:center;color:var(--muted);background:#f7faf8;border-radius:12px;margin-top:14px}
 @media(min-width:650px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}.cat{display:block;padding:18px}.cat .emoji{margin-bottom:12px}.cat strong{min-height:42px}}
+@media(max-width:560px){.blood-tools,.form-grid,.donor-list{grid-template-columns:1fr}.search button{padding:10px 12px}}
 </style>
 </head>
 <body>
@@ -52,7 +88,31 @@ footer{background:#eaf2ed;color:#53675d;padding:22px 16px;text-align:center;font
   <button class="back" id="backBtn">← সব ক্যাটাগরিতে ফিরে যান</button>
   <div class="detail-title"><div class="emoji" id="detailEmoji"></div><div><h2 id="detailName"></h2><div class="hint" id="detailEnglish"></div></div></div>
   <p class="note" id="detailDescription"></p>
-  <div class="empty"><div class="big">📋</div><h3>এই ক্যাটাগরির তথ্য শিগগিরই যুক্ত হবে</h3><p>এখনো যাচাই করা প্রতিষ্ঠানের তালিকা যোগ করা হয়নি। তথ্য যাচাই করে যুক্ত হলে এখানে নাম, ঠিকানা, ফোন নম্বর ও বিস্তারিত দেখা যাবে।</p></div>
+  <div id="genericEmpty" class="empty"><div class="big">📋</div><h3>এই ক্যাটাগরির তথ্য শিগগিরই যুক্ত হবে</h3><p>এখনো যাচাই করা প্রতিষ্ঠানের তালিকা যোগ করা হয়নি। তথ্য যাচাই করে যুক্ত হলে এখানে নাম, ঠিকানা, ফোন নম্বর ও বিস্তারিত দেখা যাবে।</p></div>
+  <div id="bloodSection" class="hidden">
+   <div class="status">ℹ️ আপাতত এটি প্রাথমিক পরীক্ষামূলক ব্যবস্থা। এই ব্রাউজারে যোগ করা তথ্য শুধু এই ডিভাইস/ব্রাউজারেই থাকবে; অন্য দর্শকরা দেখতে পাবেন না। বাস্তব ব্যবহারের আগে নিরাপদ অনলাইন ডেটাবেজ যুক্ত করতে হবে।</div>
+   <div class="blood-tools">
+    <div class="field"><label for="bloodFilter">রক্তের গ্রুপ</label><select id="bloodFilter"><option value="">সব গ্রুপ</option><option>A+</option><option>A-</option><option>B+</option><option>B-</option><option>AB+</option><option>AB-</option><option>O+</option><option>O-</option></select></div>
+    <div class="field"><label for="areaFilter">এলাকা দিয়ে খুঁজুন</label><input id="areaFilter" type="search" placeholder="যেমন: শম্ভুগঞ্জ"></div>
+   </div>
+   <div class="section-head"><h2>রক্তদাতার তালিকা</h2><span class="hint" id="donorCount">০ জন</span></div>
+   <div id="donorList" class="donor-list"></div>
+   <div class="form-panel">
+    <h2>🩸 রক্তদাতা হিসেবে নিবন্ধন</h2>
+    <p class="note">শুধু নিজের তথ্য দিন। ফোন নম্বর প্রকাশের আগে আপনার স্পষ্ট সম্মতি প্রয়োজন।</p>
+    <form id="donorForm">
+     <div class="form-grid">
+      <div class="field"><label for="donorName">নাম *</label><input id="donorName" maxlength="60" required placeholder="আপনার নাম"></div>
+      <div class="field"><label for="donorGroup">রক্তের গ্রুপ *</label><select id="donorGroup" required><option value="">নির্বাচন করুন</option><option>A+</option><option>A-</option><option>B+</option><option>B-</option><option>AB+</option><option>AB-</option><option>O+</option><option>O-</option></select></div>
+      <div class="field"><label for="donorArea">এলাকা *</label><input id="donorArea" maxlength="80" required placeholder="যেমন: গাঙ্গিনারপাড়"></div>
+      <div class="field"><label for="donorPhone">মোবাইল নম্বর *</label><input id="donorPhone" type="tel" inputmode="tel" maxlength="16" required placeholder="01XXXXXXXXX"></div>
+     </div>
+     <label class="consent"><input id="donorConsent" type="checkbox" required><span>আমি নিজের তথ্য জমা দিচ্ছি এবং বুঝেছি যে এই পরীক্ষামূলক সংস্করণে তথ্যটি শুধু এই ডিভাইসের ব্রাউজারে সংরক্ষিত হবে।</span></label>
+     <button class="btn" type="submit">তথ্য যোগ করুন</button>
+     <div id="formMessage" aria-live="polite"></div>
+    </form>
+   </div>
+  </div>
  </section>
 </main>
 <footer><strong>My Mymensingh</strong><br>আপনার শহর, আপনার সেবা<br><span>তথ্য হালনাগাদের কাজ চলমান</span></footer>
@@ -68,10 +128,60 @@ const categories = [
  {id:"tourism",bn:"পর্যটন ও দর্শনীয় স্থান",en:"Tourism & Attractions",icon:"🌳",desc:"ময়মনসিংহের দর্শনীয় স্থান ও ভ্রমণ-সংক্রান্ত তথ্য।"}
 ];
 const grid=document.getElementById("categoryGrid"),home=document.getElementById("homeView"),detail=document.getElementById("detailView");
+const STORAGE_KEY="myMymensingh_demo_donors_v1";
+function readDonors(){try{return JSON.parse(localStorage.getItem(STORAGE_KEY)||"[]");}catch(e){return [];}}
+function writeDonors(items){localStorage.setItem(STORAGE_KEY,JSON.stringify(items));}
 function showHome(){detail.classList.add("hidden");home.classList.remove("hidden");document.getElementById("searchInput").value="";window.scrollTo({top:0,behavior:"smooth"});}
-function showCategory(id){const c=categories.find(x=>x.id===id);if(!c)return;document.getElementById("detailEmoji").textContent=c.icon;document.getElementById("detailName").textContent=c.bn;document.getElementById("detailEnglish").textContent=c.en;document.getElementById("detailDescription").textContent=c.desc;home.classList.add("hidden");detail.classList.remove("hidden");window.scrollTo({top:0,behavior:"smooth"});}
+function showCategory(id){
+ const c=categories.find(x=>x.id===id);if(!c)return;
+ document.getElementById("detailEmoji").textContent=c.icon;
+ document.getElementById("detailName").textContent=c.bn;
+ document.getElementById("detailEnglish").textContent=c.en;
+ document.getElementById("detailDescription").textContent=c.desc;
+ home.classList.add("hidden");detail.classList.remove("hidden");
+ const isBlood=id==="blood";
+ document.getElementById("bloodSection").classList.toggle("hidden",!isBlood);
+ document.getElementById("genericEmpty").classList.toggle("hidden",isBlood);
+ if(isBlood)renderDonors();
+ window.scrollTo({top:0,behavior:"smooth"});
+}
 function render(list){grid.innerHTML="";list.forEach(c=>{const b=document.createElement("button");b.className="cat";b.type="button";b.innerHTML=`<span class="emoji">${c.icon}</span><span><strong>${c.bn}</strong><small>${c.en}</small></span>`;b.addEventListener("click",()=>showCategory(c.id));grid.appendChild(b);});if(!list.length)grid.innerHTML='<p class="note">কোনো ক্যাটাগরি পাওয়া যায়নি। অন্য শব্দ দিয়ে খুঁজুন।</p>';}
 function search(){const q=document.getElementById("searchInput").value.trim().toLowerCase();showHome();if(!q){render(categories);return;}render(categories.filter(c=>(c.bn+" "+c.en+" "+c.desc).toLowerCase().includes(q)));}
+function renderDonors(){
+ const group=document.getElementById("bloodFilter").value;
+ const area=document.getElementById("areaFilter").value.trim().toLowerCase();
+ const matches=readDonors().filter(d=>(!group||d.group===group)&&(!area||d.area.toLowerCase().includes(area)));
+ const list=document.getElementById("donorList");list.innerHTML="";
+ document.getElementById("donorCount").textContent=matches.length+" জন";
+ if(!matches.length){list.innerHTML='<div class="empty-list">এখনো কোনো তথ্য নেই, অথবা এই ফিল্টারে কাউকে পাওয়া যায়নি।</div>';return;}
+ matches.forEach(d=>{
+  const card=document.createElement("article");card.className="donor";
+  const top=document.createElement("div");top.className="donor-top";
+  const badge=document.createElement("span");badge.className="blood-badge";badge.textContent=d.group;
+  const info=document.createElement("div");const name=document.createElement("h3");name.textContent=d.name;
+  const place=document.createElement("p");place.textContent="📍 "+d.area;
+  info.append(name,place);top.append(badge,info);card.append(top);
+  const phone=document.createElement("a");phone.href="tel:"+d.phone.replace(/[^\d+]/g,"");phone.textContent="📞 "+d.phone;card.append(phone);
+  list.appendChild(card);
+ });
+}
+document.getElementById("donorForm").addEventListener("submit",e=>{
+ e.preventDefault();
+ const name=document.getElementById("donorName").value.trim();
+ const group=document.getElementById("donorGroup").value;
+ const area=document.getElementById("donorArea").value.trim();
+ const phone=document.getElementById("donorPhone").value.trim();
+ const consent=document.getElementById("donorConsent").checked;
+ const msg=document.getElementById("formMessage");
+ if(!name||!group||!area||!phone||!consent){msg.className="status error";msg.textContent="সব ঘর পূরণ করুন এবং সম্মতি দিন।";return;}
+ if(!/^[0-9+\-\s()]{8,16}$/.test(phone)){msg.className="status error";msg.textContent="সঠিক মোবাইল নম্বর লিখুন।";return;}
+ const items=readDonors();items.push({id:Date.now(),name,group,area,phone});
+ try{writeDonors(items);}catch(err){msg.className="status error";msg.textContent="এই ব্রাউজারে তথ্য সংরক্ষণ করা যাচ্ছে না।";return;}
+ e.target.reset();msg.className="status success";msg.textContent="তথ্য এই ডিভাইসের ব্রাউজারে যোগ হয়েছে। এটি এখনো অনলাইনে সবার জন্য প্রকাশিত হয়নি।";
+ renderDonors();
+});
+document.getElementById("bloodFilter").addEventListener("change",renderDonors);
+document.getElementById("areaFilter").addEventListener("input",renderDonors);
 document.getElementById("backBtn").addEventListener("click",showHome);
 document.getElementById("searchBtn").addEventListener("click",search);
 document.getElementById("searchInput").addEventListener("keydown",e=>{if(e.key==="Enter")search();});
