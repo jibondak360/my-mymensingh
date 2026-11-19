@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#087443">
+  <meta name="description" content="My Mymensingh — ময়মনসিংহ জেলার প্রয়োজনীয় সেবা, প্রতিষ্ঠান ও তথ্য খুঁজুন এক জায়গায়।">
+  <title>My Mymensingh — আপনার শহর, আপনার সেবা</title>
+  <style>
+    :root {
+      --green:#087443; --green-dark:#075b36; --mint:#eaf7ef;
+      --ink:#17251e; --muted:#68766e; --line:#e5eee8; --white:#fff;
+      --shadow:0 12px 32px rgba(13,72,43,.08);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:#f8fbf9;color:var(--ink);font-family:system-ui,-apple-system,"Noto Sans Bengali","Hind Siliguri",sans-serif}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1120px,calc(100% - 32px));margin:auto}
+    header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+    .nav{height:70px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:850;color:var(--green);font-size:20px;letter-spacing:-.4px}
+    .logo{width:40px;height:40px;border-radius:13px;background:var(--green);color:#fff;display:grid;place-items:center;font-size:22px}
+    .navlinks{display:flex;align-items:center;gap:22px;color:#425248;font-size:14px}
+    .navlinks a:hover{color:var(--green)}
+    .hero{padding:62px 0 52px;background:linear-gradient(135deg,#eaf7ef 0%,#f8fcf9 58%,#e4f3e9 100%)}
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:32px}
+    .eyebrow{display:inline-flex;gap:8px;align-items:center;background:#fff;color:var(--green);border:1px solid #d5eadc;padding:7px 12px;border-radius:30px;font-size:13px;font-weight:700}
+    h1{font-size:clamp(34px,5vw,56px);line-height:1.16;letter-spacing:-1.2px;margin:18px 0 12px}
+    h1 span{color:var(--green)}
+    .lead{font-size:17px;line-height:1.8;color:#52645a;max-width:590px;margin:0 0 24px}
+    .search{display:flex;gap:8px;background:#fff;border:1px solid #dce9e0;padding:7px;border-radius:14px;max-width:600px;box-shadow:var(--shadow)}
+    .search input{flex:1;min-width:0;border:0;outline:0;padding:10px 12px;font:inherit;font-size:15px;background:transparent}
+    .search button,.primary{border:0;background:var(--green);color:#fff;border-radius:10px;padding:12px 18px;font:inherit;font-weight:750;cursor:pointer}
+    .search button:hover,.primary:hover{background:var(--green-dark)}
+    .hero-note{font-size:12px;color:#718078;margin-top:11px}
+    .hero-art{min-height:260px;border-radius:28px;background:linear-gradient(145deg,#0b7a47,#075a36);position:relative;overflow:hidden;display:grid;place-items:center;color:#fff;box-shadow:0 20px 40px rgba(7,91,54,.18)}
+    .hero-art:before,.hero-art:after{content:"";position:absolute;border:1px solid rgba(255,255,255,.16);border-radius:50%}
+    .hero-art:before{width:310px;height:310px;right:-70px;top:-90px}
+    .hero-art:after{width:220px;height:220px;left:-65px;bottom:-90px}
+    .art-inner{text-align:center;position:relative;z-index:1;padding:24px}
+    .art-icon{font-size:76px;line-height:1.2}
+    .art-inner strong{display:block;font-size:23px;margin-top:12px}
+    .art-inner small{display:block;color:#d9f1e2;margin-top:6px;font-size:13px}
+    section{padding:48px 0}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:22px}
+    .section-head h2{font-size:27px;margin:0 0 6px}
+    .section-head p{margin:0;color:var(--muted);font-size:14px}
+    .count{color:var(--green);font-weight:750;font-size:13px}
+    .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .category{background:#fff;border:1px solid var(--line);border-radius:17px;padding:20px 17px;min-height:148px;transition:.2s;box-shadow:0 4px 15px rgba(20,60,38,.025)}
+    .category:hover{transform:translateY(-3px);border-color:#b8ddc6;box-shadow:var(--shadow)}
+    .cat-icon{width:48px;height:48px;border-radius:14px;background:var(--mint);display:grid;place-items:center;font-size:25px;margin-bottom:14px}
+    .category h3{font-size:16px;margin:0 0 5px}
+    .category p{font-size:12px;color:var(--muted);margin:0;line-height:1.6}
+    .empty{display:none;text-align:center;padding:28px;color:var(--muted);background:#fff;border:1px dashed #cbded1;border-radius:14px}
+    .info-band{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .info{display:flex;gap:12px;align-items:flex-start}
+    .info-icon{font-size:25px}
+    .info strong{display:block;font-size:14px;margin-bottom:4px}
+    .info span{font-size:12px;color:var(--muted);line-height:1.6}
+    .notice{background:#fff8e8;border:1px solid #f2e4bf;color:#71551b;padding:14px 16px;border-radius:12px;font-size:13px;line-height:1.7;margin-top:24px}
+    footer{background:#103b29;color:#e7f4eb;padding:30px 0}
+    .foot{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+    .foot strong{font-size:18px}
+    .foot p{margin:5px 0 0;color:#c0d9c9;font-size:12px}
+    .copyright{font-size:12px;color:#c0d9c9}
+    @media(max-width:800px){.hero-grid{grid-template-columns:1fr}.hero-art{min-height:190px}.grid{grid-template-columns:repeat(2,1fr)}.navlinks{gap:12px}.navlinks a:nth-child(2){display:none}}
+    @media(max-width:460px){.wrap{width:min(100% - 24px,1120px)}.nav{height:62px}.brand{font-size:17px}.logo{width:36px;height:36px}.navlinks{font-size:12px}.hero{padding:42px 0 36px}.lead{font-size:15px}.search button{padding:10px 12px}.section-head h2{font-size:23px}.category{padding:16px 13px;min-height:140px}.info-grid{grid-template-columns:1fr;gap:16px}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#" aria-label="My Mymensingh হোম">
+      <span class="logo">ম</span><span>My Mymensingh</span>
+    </a>
+    <nav class="navlinks" aria-label="প্রধান মেনু">
+      <a href="#categories">সেবাসমূহ</a>
+      <a href="#about">আমাদের সম্পর্কে</a>
+      <a href="#contact">যোগাযোগ</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">📍 ময়মনসিংহ জেলার ডিজিটাল সেবা নির্দেশিকা</div>
+        <h1>আপনার শহর,<br><span>আপনার সেবা</span></h1>
+        <p class="lead">ময়মনসিংহের প্রয়োজনীয় সেবা, প্রতিষ্ঠান ও তথ্য খুঁজে পাওয়ার একটি সহজ ঠিকানা। আপনার প্রয়োজনীয় ক্যাটাগরি বেছে নিন অথবা সার্চ করুন।</p>
+        <form class="search" id="searchForm">
+          <input id="searchInput" type="search" placeholder="কী খুঁজছেন? যেমন: হাসপাতাল, রক্তদাতা..." aria-label="সেবা খুঁজুন">
+          <button type="submit">খুঁজুন</button>
+        </form>
+        <div class="hero-note">ময়মনসিংহ সদরসহ পুরো জেলার জন্য তৈরি হচ্ছে</div>
+      </div>
+      <div class="hero-art" aria-label="ময়মনসিংহের সেবা">
+        <div class="art-inner">
+          <div class="art-icon">🌿 🏙️</div>
+          <strong>এক জায়গায়, প্রয়োজনীয় সেবা</strong>
+          <small>My Mymensingh · আপনার শহর, আপনার সেবা</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="categories">
+    <div class="wrap">
+      <div class="section-head">
+        <div><h2>সেবার ক্যাটাগরি</h2><p>আপনার প্রয়োজন অনুযায়ী একটি বিভাগ নির্বাচন করুন</p></div>
+        <span class="count" id="resultCount">৮টি বিভাগ</span>
+      </div>
+      <div class="grid" id="categoryGrid">
+        <a class="category" href="#categories" data-terms="জরুরি সেবা emergency ambulance police fire"><div class="cat-icon">🚑</div><h3>জরুরি সেবা</h3><p>অ্যাম্বুলেন্স, পুলিশ, ফায়ার সার্ভিস</p></a>
+        <a class="category" href="#categories" data-terms="রক্তদাতা blood donation blood donor"><div class="cat-icon">🩸</div><h3>রক্তদাতা</h3><p>রক্তদাতা ও রক্ত সংগ্রহের তথ্য</p></a>
+        <a class="category" href="#categories" data-terms="হাসপাতাল ডাক্তার hospital doctor clinic"><div class="cat-icon">🏥</div><h3>হাসপাতাল ও ডাক্তার</h3><p>হাসপাতাল, ক্লিনিক ও চিকিৎসক</p></a>
+        <a class="category" href="#categories" data-terms="পরিবহন transport bus train launch"><div class="cat-icon">🚌</div><h3>পরিবহন</h3><p>বাস, ট্রেন ও যাতায়াতের তথ্য</p></a>
+        <a class="category" href="#categories" data-terms="নাগরিক সেবা public service government office"><div class="cat-icon">🏛️</div><h3>নাগরিক সেবা</h3><p>সরকারি অফিস ও প্রয়োজনীয় সেবা</p></a>
+        <a class="category" href="#categories" data-terms="ব্যবসা বাজার business market shop restaurant"><div class="cat-icon">🛍️</div><h3>ব্যবসা ও বাজার</h3><p>দোকান, বাজার ও স্থানীয় প্রতিষ্ঠান</p></a>
+        <a class="category" href="#categories" data-terms="শিক্ষা চাকরি education jobs school college"><div class="cat-icon">🎓</div><h3>শিক্ষা ও চাকরি</h3><p>শিক্ষাপ্রতিষ্ঠান ও চাকরির তথ্য</p></a>
+        <a class="category" href="#categories" data-terms="পর্যটন দর্শনীয় স্থান tourism attractions park"><div class="cat-icon">🌳</div><h3>পর্যটন ও দর্শনীয় স্থান</h3><p>ঘোরার জায়গা ও স্থানীয় আকর্ষণ</p></a>
+      </div>
+      <div class="empty" id="emptyState">কোনো মিল পাওয়া যায়নি। অন্য শব্দ দিয়ে খুঁজুন।</div>
+      <div class="notice">ℹ️ এটি My Mymensingh-এর প্রাথমিক ওয়েবসাইট সংস্করণ। যাচাই করা স্থানীয় তথ্য যুক্ত হওয়ার পর এখানে প্রতিষ্ঠান ও সেবার বিস্তারিত তালিকা দেখা যাবে। জরুরি প্রয়োজনে যাচাই ছাড়া কোনো নম্বরের ওপর নির্ভর করবেন না।</div>
+    </div>
+  </section>
+
+  <section class="info-band" id="about">
+    <div class="wrap info-grid">
+      <div class="info"><div class="info-icon">🔎</div><div><strong>সহজে খুঁজুন</strong><span>ক্যাটাগরি ও সার্চের মাধ্যমে প্রয়োজনীয় বিভাগ খুঁজে নিন।</span></div></div>
+      <div class="info"><div class="info-icon">📍</div><div><strong>স্থানীয় তথ্য</strong><span>ময়মনসিংহ জেলার সেবাগুলো এক জায়গায় সাজানোর উদ্যোগ।</span></div></div>
+      <div class="info"><div class="info-icon">🤝</div><div><strong>সবার জন্য</strong><span>মোবাইল ও কম্পিউটার—দুই জায়গাতেই ব্যবহার উপযোগী।</span></div></div>
+    </div>
+  </section>
+</main>
+
+<footer id="contact">
+  <div class="wrap foot">
+    <div><strong>My Mymensingh</strong><p>আপনার শহর, আপনার সেবা</p></div>
+    <div class="copyright">© <span id="year"></span> My Mymensingh · তথ্য যাচাই করে প্রকাশ করা হবে</div>
+  </div>
+</footer>
+
+<script>
+  const cards = [...document.querySelectorAll('.category')];
+  const input = document.getElementById('searchInput');
+  const count = document.getElementById('resultCount');
+  const empty = document.getElementById('emptyState');
+
+  function filterCategories(query) {
+    const q = query.trim().toLocaleLowerCase('bn');
+    let shown = 0;
+    cards.forEach(card => {
+      const text = (card.innerText + ' ' + card.dataset.terms).toLocaleLowerCase('bn');
+      const match = !q || text.includes(q);
+      card.style.display = match ? '' : 'none';
+      if (match) shown++;
+    });
+    count.textContent = shown + 'টি বিভাগ';
+    empty.style.display = shown ? 'none' : 'block';
+  }
+
+  document.getElementById('searchForm').addEventListener('submit', event => {
+    event.preventDefault();
+    filterCategories(input.value);
+    document.getElementById('categories').scrollIntoView({behavior:'smooth'});
+  });
+  input.addEventListener('input', () => filterCategories(input.value));
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
